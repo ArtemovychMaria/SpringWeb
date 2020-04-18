@@ -16,9 +16,11 @@ public class Participant {
     public Participant() {
     }
 
-    public Participant(String name,String email) {
+    public Participant(String name,String email,String level,String primarySkill) {
         this.name=name;
         this.email=email;
+        this.level=level;
+        this.primarySkill=primarySkill;
     }
 
     public int getId() {
@@ -43,6 +45,14 @@ public class Participant {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getLevel() {
+        return level;
+    }
+
+    public void setLevel(String level) {
+        this.level = level;
     }
 
     public String getPrimarySkill() {

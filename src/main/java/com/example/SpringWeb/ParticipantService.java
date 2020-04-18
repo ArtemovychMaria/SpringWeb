@@ -17,7 +17,8 @@ public class ParticipantService {
     }
 
     public void create(ParticipantRequest participantRequest){
-        Participant participant = new Participant(participantRequest.getName(),participantRequest.getEmail());
+        Participant participant = new Participant(participantRequest.getName(),participantRequest.getEmail(),
+                participantRequest.getLevel(),participantRequest.getPrimarySkill());
         participantRepository.save(participant);
     }
 

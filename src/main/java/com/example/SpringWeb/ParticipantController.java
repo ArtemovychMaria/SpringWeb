@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.Optional;
 
 @Controller
@@ -38,7 +39,7 @@ public class ParticipantController {
     @PostMapping("/create")
     public String create(@ModelAttribute ParticipantRequest participantRequest, HttpServletRequest req) {
         participantService.create(participantRequest);
-        req.setAttribute("books", participantService.readAll());
+        req.setAttribute("participants", participantService.readAll());
         req.setAttribute("mode", "BOOK_VIEW");
         return "participant";
     }
@@ -52,7 +53,7 @@ public class ParticipantController {
             req.setAttribute("mode", "PARTICIPANT_EDIT");
             return "participant";
         }
-        return "noBookExist";
+        return "noParticipantExist";
     }
 
     @GetMapping("/delete")
