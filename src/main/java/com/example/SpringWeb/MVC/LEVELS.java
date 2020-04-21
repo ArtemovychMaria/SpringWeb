@@ -1,4 +1,4 @@
-package com.example.SpringWeb;
+package com.example.SpringWeb.MVC;
 
 public enum LEVELS {
     L1,

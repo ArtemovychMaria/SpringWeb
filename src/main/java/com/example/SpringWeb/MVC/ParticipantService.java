@@ -1,4 +1,4 @@
-package com.example.SpringWeb;
+package com.example.SpringWeb.MVC;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
