@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page import="com.example.SpringWeb.LEVELS"%>
+<%@page import="com.example.SpringWeb.MVC.LEVELS"%>
 <html lang="en">
 <head>
     <title>Lesson-18</title>

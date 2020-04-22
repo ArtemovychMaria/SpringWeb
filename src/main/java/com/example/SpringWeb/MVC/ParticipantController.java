@@ -1,11 +1,10 @@
-package com.example.SpringWeb;
+package com.example.SpringWeb.MVC;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
 import java.util.Optional;
 
 @Controller
@@ -23,7 +22,7 @@ public class ParticipantController {
     }
 
     @GetMapping("/new")
-    public String newBook(HttpServletRequest req) {
+    public String newParticipant(HttpServletRequest req) {
         req.setAttribute("mode", "PARTICIPANT_CREATE");
         return "participant";
     }
@@ -57,7 +56,7 @@ public class ParticipantController {
     }
 
     @GetMapping("/delete")
-    public String deleteBook(@RequestParam(name = "id") int participantId, HttpServletRequest req) {
+    public String delete(@RequestParam(name = "id") int participantId, HttpServletRequest req) {
         participantService.deleteById(participantId);
         req.setAttribute("participants", participantService.readAll());
         req.setAttribute("mode", "PARTICIPANT_VIEW");
